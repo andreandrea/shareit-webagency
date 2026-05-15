@@ -60,15 +60,15 @@ export default function Quiz() {
   const progress = done ? 100 : (currentQ / questions.length) * 100
 
   return (
-    <section id="quiz" className="lv1">
-      <h2 className="head-2">Quanto conosci il digitale?</h2>
+    <section id="quiz" className="lv1" aria-labelledby="quiz-title">
+      <h2 id="quiz-title" className="head-2">Quanto conosci il digitale?</h2>
       <div className="quiz-container">
         <div className="quiz-progress">
           <div className="quiz-progress-bar" style={{ width: `${progress}%` }} />
         </div>
 
         {done ? (
-          <div className="lv2" style={{ textAlign: 'center' }}>
+          <div className="lv2" style={{ textAlign: 'center' }} aria-live="polite">
             <h3 className="head-3">
               Punteggio: {score}/{questions.length}
               <br />

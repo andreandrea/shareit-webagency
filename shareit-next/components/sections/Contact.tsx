@@ -13,11 +13,11 @@ export default function Contact() {
   }
 
   return (
-    <section id="contatti" className="lv1">
-      <h2 className="head-2">Contattaci</h2>
+    <section id="contatti" className="lv1" aria-labelledby="contatti-title">
+      <h2 id="contatti-title" className="head-2">Contattaci</h2>
 
       {submitted && (
-        <div className="success-message">Messaggio inviato con successo!</div>
+        <div className="success-message" role="alert">Messaggio inviato con successo!</div>
       )}
 
       <form className="contact-form" onSubmit={handleSubmit}>

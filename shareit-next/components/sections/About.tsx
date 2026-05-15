@@ -32,15 +32,15 @@ export default function About() {
   }
 
   return (
-    <section id="chi-siamo" className="lv1">
-      <h2 className="head-2">Chi Siamo</h2>
+    <section id="chi-siamo" className="lv1" aria-labelledby="chi-siamo-title">
+      <h2 id="chi-siamo-title" className="head-2">Chi Siamo</h2>
       <p className="text">
         ShareIT è un&apos;agenzia digitale italiana specializzata nello sviluppo di soluzioni web
         e mobile innovative. Il nostro team di esperti combina creatività e tecnologia per offrire
         prodotti digitali di alta qualità.
       </p>
 
-      <div className="carousel-container">
+      <div className="carousel-container" aria-live="polite" aria-atomic="true">
         <div
           className="carousel"
           style={{ transform: `translateX(-${current * 100}%)` }}

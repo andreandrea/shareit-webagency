@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <main className="background">
+      <main id="main-content" className="background">
         <Services />
         <About />
         <Portfolio />

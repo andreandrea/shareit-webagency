@@ -15,17 +15,19 @@ const projects = [
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="lv1">
-      <h2 className="head-2">Portfolio</h2>
+    <section id="portfolio" className="lv1" aria-labelledby="portfolio-title">
+      <h2 id="portfolio-title" className="head-2">Portfolio</h2>
       <p className="text">Alcuni dei nostri progetti più recenti e significativi.</p>
-      <div className="services-grid">
+      <ul className="services-grid" role="list">
         {projects.map((p) => (
-          <div key={p.title} className="lv2 service-card">
-            <h3 className="head-3">{p.title}</h3>
-            <p className="text">{p.description}</p>
-          </div>
+          <li key={p.title}>
+            <article className="lv2 service-card">
+              <h3 className="head-3">{p.title}</h3>
+              <p className="text">{p.description}</p>
+            </article>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   )
 }
