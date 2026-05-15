@@ -27,17 +27,15 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="servizi" className="section">
-      <div className="lv1">
-        <h2 className="head-2">I Nostri Servizi</h2>
-        <div className="services-grid">
-          {services.map((s) => (
-            <div key={s.title} className="service-card">
-              <h3 className="head-3">{s.title}</h3>
-              <p className="text">{s.description}</p>
-            </div>
-          ))}
-        </div>
+    <section id="servizi" className="lv1">
+      <h2 className="head-2">I Nostri Servizi</h2>
+      <div className="services-grid">
+        {services.map((s) => (
+          <div key={s.title} className="lv2 service-card">
+            <h3 className="head-3">{s.title}</h3>
+            <p className="text">{s.description}</p>
+          </div>
+        ))}
       </div>
     </section>
   )

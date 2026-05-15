@@ -15,17 +15,15 @@ const newsItems = [
 
 export default function News() {
   return (
-    <section id="news" className="section">
-      <div className="lv1">
-        <h2 className="head-2">News &amp; Aggiornamenti</h2>
-        <div className="services-grid">
-          {newsItems.map((n) => (
-            <div key={n.date} className="service-card">
-              <h3 className="head-3">{n.date}</h3>
-              <p className="text">{n.text}</p>
-            </div>
-          ))}
-        </div>
+    <section id="news" className="lv1">
+      <h2 className="head-2">News &amp; Aggiornamenti</h2>
+      <div className="services-grid">
+        {newsItems.map((n) => (
+          <div key={n.date} className="lv2 service-card">
+            <h3 className="head-3">{n.date}</h3>
+            <p className="text">{n.text}</p>
+          </div>
+        ))}
       </div>
     </section>
   )

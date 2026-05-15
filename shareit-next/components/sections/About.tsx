@@ -27,35 +27,42 @@ export default function About() {
     return () => clearInterval(timer)
   }, [])
 
-  return (
-    <section id="chi-siamo" className="section">
-      <div className="lv1">
-        <h2 className="head-2">Chi Siamo</h2>
-        <p className="text">
-          ShareIT è un&apos;agenzia digitale italiana specializzata nello sviluppo di soluzioni web
-          e mobile innovative. Il nostro team di esperti combina creatività e tecnologia per offrire
-          prodotti digitali di alta qualità.
-        </p>
+  const goToSlide = (index: number) => {
+    setCurrent(index)
+  }
 
-        <div className="carousel-container">
-          <div className="carousel">
-            {slides.map((slide, i) => (
-              <div key={slide.title} className={`carousel-slide${i === current ? ' active' : ''}`}>
+  return (
+    <section id="chi-siamo" className="lv1">
+      <h2 className="head-2">Chi Siamo</h2>
+      <p className="text">
+        ShareIT è un&apos;agenzia digitale italiana specializzata nello sviluppo di soluzioni web
+        e mobile innovative. Il nostro team di esperti combina creatività e tecnologia per offrire
+        prodotti digitali di alta qualità.
+      </p>
+
+      <div className="carousel-container">
+        <div
+          className="carousel"
+          style={{ transform: `translateX(-${current * 100}%)` }}
+        >
+          {slides.map((slide) => (
+            <div key={slide.title} className="carousel-slide">
+              <div className="lv2">
                 <h3 className="head-3">{slide.title}</h3>
                 <p className="text">{slide.text}</p>
               </div>
-            ))}
-          </div>
-          <div className="carousel-controls">
-            {slides.map((_, i) => (
-              <button
-                key={i}
-                className={`carousel-dot${i === current ? ' active' : ''}`}
-                onClick={() => setCurrent(i)}
-                aria-label={`Vai alla slide ${i + 1}`}
-              />
-            ))}
-          </div>
+            </div>
+          ))}
+        </div>
+        <div className="carousel-controls">
+          {slides.map((_, i) => (
+            <button
+              key={i}
+              className={`carousel-dot${i === current ? ' active' : ''}`}
+              onClick={() => goToSlide(i)}
+              aria-label={`Vai alla slide ${i + 1}`}
+            />
+          ))}
         </div>
       </div>
     </section>

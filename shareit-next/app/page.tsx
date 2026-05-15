@@ -8,14 +8,16 @@ import Contact from '@/components/sections/Contact'
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Hero />
-      <Services />
-      <About />
-      <Portfolio />
-      <News />
-      <Quiz />
-      <Contact />
-    </main>
+      <main className="background">
+        <Services />
+        <About />
+        <Portfolio />
+        <News />
+        <Quiz />
+        <Contact />
+      </main>
+    </>
   )
 }

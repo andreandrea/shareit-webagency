@@ -60,42 +60,40 @@ export default function Quiz() {
   const progress = done ? 100 : (currentQ / questions.length) * 100
 
   return (
-    <section id="quiz" className="section">
-      <div className="lv1">
-        <h2 className="head-2">Quanto conosci il digitale?</h2>
-        <div className="quiz-container">
-          <div className="quiz-progress">
-            <div className="quiz-progress-bar" style={{ width: `${progress}%` }} />
-          </div>
-
-          {done ? (
-            <div>
-              <h3 className="head-3">
-                Punteggio: {score}/{questions.length}
-                <br />
-                {score === questions.length ? 'Esperto Digitale! 🚀' : 'Puoi migliorare!'}
-              </h3>
-              <button className="btn" onClick={reset} style={{ marginTop: '20px' }}>
-                Riprova
-              </button>
-            </div>
-          ) : (
-            <div>
-              <h3 className="head-3">{questions[currentQ].text}</h3>
-              <div className="answers">
-                {questions[currentQ].answers.map((a) => (
-                  <button
-                    key={a.label}
-                    className="answer-btn"
-                    onClick={() => handleAnswer(a.correct)}
-                  >
-                    {a.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
+    <section id="quiz" className="lv1">
+      <h2 className="head-2">Quanto conosci il digitale?</h2>
+      <div className="quiz-container">
+        <div className="quiz-progress">
+          <div className="quiz-progress-bar" style={{ width: `${progress}%` }} />
         </div>
+
+        {done ? (
+          <div className="lv2" style={{ textAlign: 'center' }}>
+            <h3 className="head-3">
+              Punteggio: {score}/{questions.length}
+              <br />
+              {score === questions.length ? 'Esperto Digitale! 🚀' : 'Puoi migliorare!'}
+            </h3>
+            <div style={{ marginTop: '20px' }}>
+              <button className="btn" onClick={reset}>Riprova</button>
+            </div>
+          </div>
+        ) : (
+          <div className="lv2">
+            <h3 className="head-3">{questions[currentQ].text}</h3>
+            <div className="answers">
+              {questions[currentQ].answers.map((a) => (
+                <button
+                  key={a.label}
+                  className="answer-btn"
+                  onClick={() => handleAnswer(a.correct)}
+                >
+                  {a.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   )
