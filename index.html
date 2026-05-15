@@ -4,15 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShareIt Web Agency</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800&family=Titillium+Web:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <section class="hero">
-        <h1>ShareIt Web Agency</h1>
-        <p>Trasformiamo le tue idee in esperienze digitali ad alte prestazioni.</p>
-        <a href="#" class="btn" id="cta-btn">Inizia il Progetto</a>
-    </section>
+    <header class="header">
+        <button class="logo-button" id="logoTrigger">
+            <span class="logo-text">ShareIT</span>
+        </button>
+    </header>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <div class="menu-background" id="menuBackground"></div>
+    <nav class="menu-container" id="menuContainer">
+        <div class="menu-inner">
+            <ul class="menu-list">
+                <li><a href="#chi-siamo" class="menu-link">Chi siamo</a></li>
+                <li><a href="#portfolio" class="menu-link">Portfolio</a></li>
+                <li><a href="#servizi" class="menu-link">Servizi</a></li>
+                <li><a href="#contatti" class="menu-link">Contatti</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="background-container">
+        <h1 class="main-title">Il Nostro Carousel</h1>
+        <div class="carousel-wrapper">
+            <button class="arrow-button prev" onclick="moveSlide(-1)">
+                <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="arrow-button next" onclick="moveSlide(1)">
+                <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="slide active">
+                        <h2>Sviluppo Web</h2>
+                        <p>Creiamo interfacce futuristiche con prestazioni estreme per la tua presenza digitale.</p>
+                    </div>
+                    <div class="slide">
+                        <h2>E-commerce</h2>
+                        <p>Soluzioni scalabili su Shopify e custom stack per massimizzare le tue vendite.</p>
+                    </div>
+                    <div class="slide">
+                        <h2>Digital Design</h2>
+                        <p>L'estetica incontra la funzionalità in un mix perfetto di creatività e codice.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dots"></div>
+        </div>
+    </main>
 
     <script src="script.js"></script>
 </body>
