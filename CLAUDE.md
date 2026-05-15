@@ -1,6 +1,6 @@
 # ShareIT Web Agency
 
-Sito istituzionale di **ShareIT**, agenzia digitale italiana. Il progetto vive in `shareit-next/` (Next.js 16); i file `index.html` / `style.css` / `script.js` nella root sono la versione statica legacy.
+Sito istituzionale di **ShareIT**, agenzia digitale italiana. Il progetto vive interamente in `shareit-next/` (Next.js 16).
 
 ## Stack
 
