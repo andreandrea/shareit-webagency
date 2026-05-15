@@ -84,9 +84,9 @@ body::before {
   top: var(--header-top-offset);
   left: 50%;
   transform: translateX(-50%);
-  /* barra verticale azzurra a sinistra */
+  /* barra orizzontale azzurra in cima */
   border: 1px solid rgba(0, 216, 255, 0.1);
-  border-left: 4px solid var(--accent-color);
+  border-top: 4px solid var(--accent-color);
   transition: var(--transition-standard);
   z-index: 1000;
 }
@@ -489,9 +489,9 @@ textarea { min-height: 100px; resize: vertical; }
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-normal);
   margin: var(--spacing-xl) auto;
-  /* barra verticale azzurra a sinistra */
+  /* barra orizzontale azzurra in cima */
   border: 1px solid rgba(0, 216, 255, 0.1);
-  border-left: 4px solid var(--accent-color);
+  border-top: 4px solid var(--accent-color);
   transition: var(--transition-standard);
   flex-wrap: wrap;
   gap: var(--spacing-md);
