@@ -4,47 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShareIT - Innovazione Digitale</title>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&family=Orbitron:wght@400;700;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Header con Logo Trigger Centrale -->
     <header class="header">
-        <div class="header-icons">
-            <a href="#" class="header-icon-circle"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="header-icon-circle"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="header-icon-circle"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-
-        <div class="header-logo-container">
-            <a href="#hero" class="header-logo">
-                <span class="logo-share">SHARE</span><span class="logo-it">IT</span>
-            </a>
-        </div>
-
-        <div class="header-icons">
-            <a href="mailto:info@shareitwebagency.com" class="header-icon-circle"><i class="fas fa-envelope"></i></a>
-            <a href="tel:+39000000000" class="header-icon-circle"><i class="fas fa-phone"></i></a>
-            <a href="#" class="header-icon-circle"><i class="fas fa-comment"></i></a>
-            <button class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
-        </div>
+        <button class="logo-button" id="logoTrigger">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/center-svg" width="100%" height="100%" viewBox="0 0 243.4 109.2" preserveAspectRatio="xMidYMid meet">
+                <text transform="matrix(1 0 0 1 61.6693 64.1804)" fill="#55C3EA" font-family="Orbitron" font-weight="700" font-size="28.4768px">
+                    <tspan>Share</tspan><tspan x="97" font-weight="400">IT</tspan>
+                </text>
+            </svg>
+        </button>
     </header>
 
-    <!-- Full Screen Menu -->
-    <div class="header-menu" id="fullMenu">
-        <button class="menu-close" onclick="toggleMenu()">×</button>
-        <ul class="menu-nav">
-            <li><a href="#hero"      class="menu-link" onclick="toggleMenu()">Home</a></li>
-            <li><a href="#servizi"   class="menu-link" onclick="toggleMenu()">Servizi</a></li>
-            <li><a href="#chi-siamo" class="menu-link" onclick="toggleMenu()">Chi Siamo</a></li>
-            <li><a href="#portfolio" class="menu-link" onclick="toggleMenu()">Portfolio</a></li>
-            <li><a href="#news"      class="menu-link" onclick="toggleMenu()">News</a></li>
-            <li><a href="#quiz"      class="menu-link" onclick="toggleMenu()">Quiz</a></li>
-            <li><a href="#contatti"  class="menu-link" onclick="toggleMenu()">Contatti</a></li>
-        </ul>
-    </div>
+    <!-- Overlay e Menu Centrale -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <div class="menu-background" id="menuBackground"></div>
+    <nav class="menu-container" id="menuContainer">
+        <div class="menu-inner">
+            <ul class="menu-list">
+                <li><a href="#hero" class="menu-link" onclick="toggleMenu(false)">Home</a></li>
+                <li><a href="#servizi" class="menu-link" onclick="toggleMenu(false)">Servizi</a></li>
+                <li><a href="#chi-siamo" class="menu-link" onclick="toggleMenu(false)">Chi siamo</a></li>
+                <li><a href="#portfolio" class="menu-link" onclick="toggleMenu(false)">Portfolio</a></li>
+                <li><a href="#news" class="menu-link" onclick="toggleMenu(false)">News</a></li>
+                <li><a href="#quiz" class="menu-link" onclick="toggleMenu(false)">Quiz</a></li>
+                <li><a href="#contatti" class="menu-link" onclick="toggleMenu(false)">Contatti</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
     <section id="hero">
@@ -144,7 +136,7 @@
     <!-- News Section -->
     <section id="news" class="section">
         <div class="lv1">
-            <h2 class="head-2">News &amp; Aggiornamenti</h2>
+            <h2 class="head-2">News & Aggiornamenti</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <h3 class="head-3">Maggio 2025</h3>
@@ -234,13 +226,10 @@
             <a href="#" class="footer-icon-circle"><i class="fab fa-instagram"></i></a>
             <a href="#" class="footer-icon-circle"><i class="fab fa-linkedin-in"></i></a>
         </div>
-
         <div class="footer-logo-container">
-            <a href="#hero" class="footer-logo">
-                <span class="logo-share">SHARE</span><span class="logo-it">IT</span>
-            </a>
+            <span class="logo-share" style="color: var(--primary-blue); font-family: 'Orbitron'; font-weight: 700; font-size: 1.5rem;">SHARE</span>
+            <span class="logo-it" style="color: var(--primary-blue); font-family: 'Orbitron'; font-weight: 400; font-size: 1.5rem;">IT</span>
         </div>
-
         <div class="footer-content">
             <p>© 2025 ShareIT. Tutti i diritti riservati.</p>
             <a href="mailto:info@shareitwebagency.com">info@shareitwebagency.com</a>
