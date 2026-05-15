@@ -31,7 +31,7 @@
   --font-size-hero-h1: 64px;
   --font-size-hero-p: 28px;
   --fixed-header-height: 120px;
-  --header-top-offset: 0px;
+  --header-top-offset: var(--spacing-xl);
 }
 
 * {
@@ -68,27 +68,30 @@ body::before {
   pointer-events: none;
 }
 
-/* ===== HEADER ===== */
+/* ===== FLOATING HEADER ===== */
 .header {
   background: linear-gradient(145deg, var(--color-box-outer), rgba(11, 18, 25, 0.9));
-  width: 100%;
+  width: 85%;
+  max-width: 1280px;
   height: var(--fixed-header-height);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--spacing-md) var(--spacing-xl);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-normal);
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  border-bottom: 1px solid rgba(0, 216, 255, 0.1);
+  top: var(--header-top-offset);
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid rgba(0, 216, 255, 0.1);
   border-top: 4px solid var(--accent-color);
-  transition: box-shadow 0.3s ease;
+  transition: var(--transition-standard);
   z-index: 1000;
 }
 
 .header:hover {
+  transform: translateX(-50%) translateY(-4px);
   box-shadow: var(--shadow-hover), var(--shadow-accent);
 }
 
@@ -659,6 +662,7 @@ textarea { min-height: 100px; resize: vertical; }
   html { scroll-snap-type: none; }
 
   .header {
+    width: 90%;
     flex-wrap: wrap;
     height: auto;
     padding: var(--spacing-md) var(--spacing-sm);
