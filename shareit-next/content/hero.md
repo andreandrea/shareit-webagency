@@ -1,5 +1,5 @@
 ---
-badge: "🚀 Il tuo store è pronto in 48 ore"
+badge: "Il tuo store è pronto in 48 ore"
 words:
   - Fotografi
   - Illustratori

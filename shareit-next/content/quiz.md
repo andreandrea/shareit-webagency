@@ -4,19 +4,19 @@ subtitle: "Scopri se hai già capito come funziona la piattaforma — e quanto s
 results:
   - min: 0
     max: 0
-    emoji: "🤔"
+    emoji: ""
     message: "Ancora qualche dubbio? Leggi la sezione \"Come funziona\" e poi candidati."
   - min: 1
     max: 1
-    emoji: "👍"
+    emoji: ""
     message: "Ci sei quasi! Il modello ArtStore è fatto per te."
   - min: 2
     max: 2
-    emoji: "🔥"
+    emoji: ""
     message: "Quasi esperto! Pronto per aprire il tuo store?"
   - min: 3
     max: 3
-    emoji: "🚀"
+    emoji: ""
     message: "Perfetto! Candidati subito — sei esattamente il tipo di artista che cerchiamo."
 questions:
   - text: "Quale canale porta davvero clienti ai tuoi prodotti?"

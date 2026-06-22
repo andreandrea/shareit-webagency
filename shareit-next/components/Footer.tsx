@@ -2,8 +2,8 @@ export default function Footer() {
   return (
     <footer className="footer">
       <a href="#hero" className="footer-logo">
-        <span className="logo-share">ART</span>
-        <span className="logo-it">STORE</span>
+        <span className="logo-share">SHARE</span>
+        <span className="logo-it">IT</span>
       </a>
 
       <div className="footer-center">

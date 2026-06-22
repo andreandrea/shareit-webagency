@@ -2,13 +2,13 @@
 title: "Chi siamo"
 intro: "**ShareIT Web Agency** è la società tecnologica dietro la piattaforma ArtStore — il sistema che trasforma ogni artista con un pubblico attivo in un e-commerce indipendente di stampe e opere incorniciate."
 pillars:
-  - icon: "⚡"
+  - icon: ""
     title: "Store live in 48h"
     description: "Provisioning automatizzato. Zero attesa, zero ops."
-  - icon: "🖨️"
+  - icon: ""
     title: "Fulfillment premium"
     description: "Stampa Fine Art, cornici artigianali, packaging senza plastiche."
-  - icon: "💰"
+  - icon: ""
     title: "Zero abbonamento"
     description: "Guadagniamo solo quando tu vendi. Incentivi allineati."
 slides:

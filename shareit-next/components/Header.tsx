@@ -103,10 +103,9 @@ export default function Header() {
       {/* Logo centrato (apre il menu) */}
       <div className="header-logo-container">
         <a href="#hero" className="header-logo" onClick={toggle} aria-label="Apri menu" id="header-logo-btn">
-          <span className="logo-share">ART</span>
-          <span className="logo-it">STORE</span>
+          <span className="logo-share">SHARE</span>
+          <span className="logo-it">IT</span>
         </a>
-        <p className="header-tagline">by ShareIT Web Agency</p>
       </div>
 
       {/* Icone contatti (destra) */}
@@ -124,15 +123,32 @@ export default function Header() {
 
       {/* Menu full-page overlay */}
       <nav className={`header-menu${isOpen ? ' active' : ''}`} aria-hidden={!isOpen}>
-        <ul className="menu-nav">
-          {navItems.map(({ href, label }) => (
-            <li key={href}>
-              <a href={href} className="menu-link" onClick={close}>
-                {label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="menu-content">
+          <ul className="menu-nav">
+            {navItems.map(({ href, label }) => (
+              <li key={href}>
+                <a href={href} className="menu-link" onClick={close}>
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          {/* Icone mostrate nel menu solo su mobile */}
+          <div className="menu-mobile-icons">
+            <a href="https://instagram.com/shareitwebagency" className="header-icon-circle" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <InstagramIcon />
+            </a>
+            <a href="https://linkedin.com/company/shareitwebagency" className="header-icon-circle" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <LinkedInIcon />
+            </a>
+            <a href="mailto:info@shareitwebagency.com" className="header-icon-circle" aria-label="Email">
+              <EmailIcon />
+            </a>
+            <a href="tel:+390291234567" className="header-icon-circle" aria-label="Telefono">
+              <PhoneIcon />
+            </a>
+          </div>
+        </div>
       </nav>
     </header>
   )

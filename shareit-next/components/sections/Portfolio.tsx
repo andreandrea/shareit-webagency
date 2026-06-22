@@ -22,13 +22,12 @@ export default function Portfolio({ data }: { data: any }) {
               <p className="text store-handle">{ex.handle}</p>
               <p className="text" style={{ marginTop: 'var(--spacing-sm)' }}>{ex.description}</p>
               <div className="store-result">
-                <span className="store-result-icon">✅</span>
                 <span className="text" style={{ fontSize: 'var(--font-size-sm)', fontWeight: 600 }}>
-                  {ex.result}
+                  Risultato: {ex.result}
                 </span>
               </div>
               <div className="store-meta">
-                <span className="store-meta-item">🖼️ {ex.works} opere</span>
+                <span className="store-meta-item">{ex.works} opere caricate</span>
               </div>
             </article>
           </li>
