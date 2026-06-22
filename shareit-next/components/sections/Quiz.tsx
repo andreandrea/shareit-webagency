@@ -2,47 +2,16 @@
 
 import { useState } from 'react'
 
-type Answer = { label: string; correct: boolean }
-type Question = { text: string; answers: Answer[] }
-
-const questions: Question[] = [
-  {
-    text: 'Cosa significa SEO?',
-    answers: [
-      { label: 'Social Engine Optimization', correct: false },
-      { label: 'Search Engine Optimization', correct: true },
-      { label: 'Software Engineering Operations', correct: false },
-      { label: 'Secure Email Output', correct: false },
-    ],
-  },
-  {
-    text: 'Cosa si intende per "responsive design"?',
-    answers: [
-      { label: 'Un sito che risponde alle email', correct: false },
-      { label: 'Un sito che si adatta a ogni dispositivo', correct: true },
-      { label: 'Un design molto veloce', correct: false },
-      { label: 'Un sito con molte animazioni', correct: false },
-    ],
-  },
-  {
-    text: "Cos'è il Cloud Computing?",
-    answers: [
-      { label: 'Tecnologia meteorologica', correct: false },
-      { label: 'Un tipo di database locale', correct: false },
-      { label: 'Servizi IT erogati via internet', correct: true },
-      { label: 'Un linguaggio di programmazione', correct: false },
-    ],
-  },
-]
-
-export default function Quiz() {
+export default function Quiz({ data }: { data: any }) {
   const [currentQ, setCurrentQ] = useState(0)
   const [score, setScore] = useState(0)
   const [done, setDone] = useState(false)
 
+  if (!data) return null;
+
   const handleAnswer = (correct: boolean) => {
     const newScore = correct ? score + 1 : score
-    if (currentQ + 1 < questions.length) {
+    if (currentQ + 1 < data.questions.length) {
       setScore(newScore)
       setCurrentQ(currentQ + 1)
     } else {
@@ -57,11 +26,17 @@ export default function Quiz() {
     setDone(false)
   }
 
-  const progress = done ? 100 : (currentQ / questions.length) * 100
+  const progress = done ? 100 : (currentQ / data.questions.length) * 100
+  const result = data.results.find((r: any) => score >= r.min && score <= r.max)
 
   return (
     <section id="quiz" className="lv1" aria-labelledby="quiz-title">
-      <h2 id="quiz-title" className="head-2">Quanto conosci il digitale?</h2>
+      <h2 id="quiz-title" className="head-2">
+        {data.title}
+      </h2>
+      <p className="text" style={{ textAlign: 'center', maxWidth: 580, margin: '0 auto var(--spacing-md)' }}>
+        {data.subtitle}
+      </p>
       <div className="quiz-container">
         <div className="quiz-progress">
           <div className="quiz-progress-bar" style={{ width: `${progress}%` }} />
@@ -69,24 +44,33 @@ export default function Quiz() {
 
         {done ? (
           <div className="lv2" style={{ textAlign: 'center' }} aria-live="polite">
+            <div style={{ fontSize: 48, marginBottom: 'var(--spacing-sm)' }}>{result?.emoji}</div>
             <h3 className="head-3">
-              Punteggio: {score}/{questions.length}
-              <br />
-              {score === questions.length ? 'Esperto Digitale! 🚀' : 'Puoi migliorare!'}
+              {score}/{data.questions.length} risposte corrette
             </h3>
-            <div style={{ marginTop: '20px' }}>
-              <button className="btn" onClick={reset}>Riprova</button>
+            <p className="text" style={{ marginTop: 'var(--spacing-sm)', marginBottom: 'var(--spacing-md)' }}>
+              {result?.message}
+            </p>
+            <div style={{ display: 'flex', gap: 'var(--spacing-sm)', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <button className="btn" onClick={reset} id="quiz-retry-btn">Riprova</button>
+              <a href="#contatti" className="btn" style={{ background: 'transparent', border: '1px solid var(--accent-color)', color: 'var(--accent-color)' }} id="quiz-apply-btn">
+                Candidati ora →
+              </a>
             </div>
           </div>
         ) : (
           <div className="lv2">
-            <h3 className="head-3">{questions[currentQ].text}</h3>
+            <p className="text" style={{ fontSize: 'var(--font-size-sm)', opacity: 0.6, marginBottom: 'var(--spacing-xs)' }}>
+              Domanda {currentQ + 1} di {data.questions.length}
+            </p>
+            <h3 className="head-3">{data.questions[currentQ].text}</h3>
             <div className="answers">
-              {questions[currentQ].answers.map((a) => (
+              {data.questions[currentQ].answers.map((a: any) => (
                 <button
                   key={a.label}
                   className="answer-btn"
                   onClick={() => handleAnswer(a.correct)}
+                  id={`quiz-answer-${a.label.substring(0, 10).replace(/\s/g, '-')}`}
                 >
                   {a.label}
                 </button>

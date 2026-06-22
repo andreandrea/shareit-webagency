@@ -4,12 +4,13 @@ import { useState, useEffect } from 'react'
 
 const navItems = [
   { href: '#hero', label: 'Home' },
-  { href: '#servizi', label: 'Servizi' },
+  { href: '#come-funziona', label: 'Come Funziona' },
   { href: '#chi-siamo', label: 'Chi Siamo' },
-  { href: '#portfolio', label: 'Portfolio' },
-  { href: '#news', label: 'News' },
+  { href: '#portfolio', label: 'Store Attivi' },
+  { href: '#prezzi', label: 'Prezzi' },
+  { href: '#faq', label: 'FAQ' },
   { href: '#quiz', label: 'Quiz' },
-  { href: '#contatti', label: 'Contatti' },
+  { href: '#contatti', label: 'Candidati' },
 ]
 
 function FacebookIcon() {
@@ -88,34 +89,35 @@ export default function Header() {
     <header className="header">
       {/* Icone social (sinistra) */}
       <div className="header-icons social-icons">
-        <a href="#" className="header-icon-circle" aria-label="Facebook">
-          <FacebookIcon />
-        </a>
-        <a href="#" className="header-icon-circle" aria-label="Instagram">
+        <a href="https://instagram.com/shareitwebagency" className="header-icon-circle" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
           <InstagramIcon />
         </a>
-        <a href="#" className="header-icon-circle" aria-label="LinkedIn">
+        <a href="https://linkedin.com/company/shareitwebagency" className="header-icon-circle" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
           <LinkedInIcon />
+        </a>
+        <a href="https://facebook.com/shareitwebagency" className="header-icon-circle" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+          <FacebookIcon />
         </a>
       </div>
 
       {/* Logo centrato (apre il menu) */}
       <div className="header-logo-container">
-        <a href="#hero" className="header-logo" onClick={toggle} aria-label="Apri menu">
-          <span className="logo-share">SHARE</span>
-          <span className="logo-it">IT</span>
+        <a href="#hero" className="header-logo" onClick={toggle} aria-label="Apri menu" id="header-logo-btn">
+          <span className="logo-share">ART</span>
+          <span className="logo-it">STORE</span>
         </a>
+        <p className="header-tagline">by ShareIT Web Agency</p>
       </div>
 
       {/* Icone contatti (destra) */}
       <div className="header-icons contact-icons">
-        <a href="mailto:info@shareitwebagency.com" className="header-icon-circle" aria-label="Email">
+        <a href="mailto:artstore@shareitwebagency.com" className="header-icon-circle" aria-label="Email" id="header-email-btn">
           <EmailIcon />
         </a>
-        <a href="tel:+39000000000" className="header-icon-circle" aria-label="Telefono">
+        <a href="tel:+390291234567" className="header-icon-circle" aria-label="Telefono" id="header-phone-btn">
           <PhoneIcon />
         </a>
-        <a href="#contatti" className="header-icon-circle" aria-label="Chat" onClick={close}>
+        <a href="#contatti" className="header-icon-circle" aria-label="Candidati" onClick={close} id="header-apply-btn">
           <ChatIcon />
         </a>
       </div>

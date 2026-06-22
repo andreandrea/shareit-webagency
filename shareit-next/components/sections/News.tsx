@@ -1,33 +1,23 @@
-const newsItems = [
-  {
-    date: 'Maggio 2025',
-    datetime: '2025-05',
-    text: 'ShareIT lancia il nuovo servizio di AI Integration per le PMI italiane.',
-  },
-  {
-    date: 'Aprile 2025',
-    datetime: '2025-04',
-    text: 'Premiati come miglior agenzia digitale under 40 al DigitalAwards 2025.',
-  },
-  {
-    date: 'Marzo 2025',
-    datetime: '2025-03',
-    text: 'Nuovo partnership strategico con i principali cloud provider europei.',
-  },
-]
+export default function FAQ({ data }: { data: any }) {
+  if (!data) return null;
 
-export default function News() {
   return (
-    <section id="news" className="lv1" aria-labelledby="news-title">
-      <h2 id="news-title" className="head-2">News &amp; Aggiornamenti</h2>
-      <ul className="services-grid" role="list">
-        {newsItems.map((n) => (
-          <li key={n.datetime}>
-            <article className="lv2 service-card">
-              <h3 className="head-3">
-                <time dateTime={n.datetime}>{n.date}</time>
+    <section id="faq" className="lv1" aria-labelledby="faq-title">
+      <h2 id="faq-title" className="head-2">
+        {data.title}
+      </h2>
+      <p className="text" style={{ textAlign: 'center', maxWidth: 640, margin: '0 auto var(--spacing-lg)' }}>
+        {data.subtitle}
+      </p>
+      <ul className="faq-list" role="list">
+        {data.items.map((n: any, i: number) => (
+          <li key={i}>
+            <article className="lv2 faq-card">
+              <h3 className="head-3 faq-q">
+                <span className="faq-q-icon">?</span>
+                {n.question}
               </h3>
-              <p className="text">{n.text}</p>
+              <p className="text faq-a">{n.answer}</p>
             </article>
           </li>
         ))}

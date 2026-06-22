@@ -1,0 +1,40 @@
+---
+title: "Prezzi trasparenti"
+subtitle: "Nessun abbonamento mensile obbligatorio. Nessun costo nascosto. Guadagniamo quando tu vendi."
+footnote: "Il prezzo di produzione (stampa + cornice) viene fatturato separatamente per ogni ordine — lo scopri esatto nel configuratore."
+plans:
+  - name: "Starter"
+    tagline: "Per chi inizia"
+    price: "0"
+    priceNote: "Nessun costo fisso"
+    highlight: false
+    cta: "Candidati gratis"
+    ctaHref: "#contatti"
+    ctaId: "pricing-starter-cta"
+    features:
+      - "✅ Store brandizzato (URL artista.fotorecord.art)"
+      - "✅ Fino a 20 opere nel catalogo"
+      - "✅ Configuratore con anteprima prodotto"
+      - "✅ Pagamenti integrati (Stripe / PayPal)"
+      - "✅ Fulfillment stampa + cornice + spedizione"
+      - "✅ Commissione ShareIT: 5% per ordine"
+      - "⬜ Dashboard analytics avanzata"
+      - "⬜ Dominio custom (es. shop.tuonome.com)"
+  - name: "Pro"
+    tagline: "Per chi vuole scalare"
+    price: "149"
+    priceNote: "/ anno (12,50 €/mese)"
+    highlight: true
+    cta: "Scegli Pro"
+    ctaHref: "#contatti"
+    ctaId: "pricing-pro-cta"
+    features:
+      - "✅ Tutto di Starter, più:"
+      - "✅ Catalogo illimitato"
+      - "✅ Commissione ShareIT ridotta: 2%"
+      - "✅ Dashboard analytics (vendite, revenue, top opere)"
+      - "✅ Dominio custom gratuito primo anno"
+      - "✅ Certificato di autenticità digitale per ogni opera"
+      - "✅ Priority support (risposta entro 24h)"
+      - "✅ Onboarding call 1:1 con il nostro team"
+---

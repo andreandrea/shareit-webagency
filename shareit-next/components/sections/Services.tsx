@@ -1,37 +1,21 @@
-const services = [
-  {
-    title: 'Sviluppo Web',
-    description: 'Siti web moderni e responsive per il tuo business digitale.',
-  },
-  {
-    title: 'App Mobile',
-    description: 'Applicazioni native e cross-platform per iOS e Android.',
-  },
-  {
-    title: 'E-commerce',
-    description: 'Piattaforme di vendita online ottimizzate per le conversioni.',
-  },
-  {
-    title: 'Digital Marketing',
-    description: 'Strategie complete per la tua presenza online.',
-  },
-  {
-    title: 'Cloud Solutions',
-    description: 'Infrastrutture cloud scalabili e sicure per la tua azienda.',
-  },
-  {
-    title: 'Consulenza IT',
-    description: 'Supporto strategico e tecnico per la tua trasformazione digitale.',
-  },
-]
+export default function HowItWorks({ data }: { data: any }) {
+  if (!data) return null;
 
-export default function Services() {
   return (
-    <section id="servizi" className="lv1" aria-labelledby="servizi-title">
-      <h2 id="servizi-title" className="head-2">I Nostri Servizi</h2>
-      <ul className="services-grid" role="list">
-        {services.map((s) => (
-          <li key={s.title} className="lv2 service-card">
+    <section id="come-funziona" className="lv1" aria-labelledby="come-funziona-title">
+      <h2 id="come-funziona-title" className="head-2">
+        {data.title}
+      </h2>
+      <p className="text" style={{ textAlign: 'center', maxWidth: 660, margin: '0 auto var(--spacing-lg)' }}>
+        {data.subtitle}
+      </p>
+      <ul className="steps-grid" role="list">
+        {data.steps.map((s: any) => (
+          <li key={s.step} className="lv2 step-card">
+            <div className="step-header">
+              <span className="step-number">{s.step}</span>
+              <span className="step-icon">{s.icon}</span>
+            </div>
             <h3 className="head-3">{s.title}</h3>
             <p className="text">{s.description}</p>
           </li>

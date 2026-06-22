@@ -17,14 +17,24 @@ const orbitron = Orbitron({
 })
 
 export const metadata: Metadata = {
-  title: 'ShareIT - Innovazione Digitale',
+  title: 'ArtStore by ShareIT — Negozi online per fotografi e illustratori',
   description:
-    "ShareIT è un'agenzia digitale italiana specializzata nello sviluppo di soluzioni web e mobile innovative.",
-  keywords: ['agenzia digitale', 'sviluppo web', 'app mobile', 'e-commerce', 'digital marketing', 'cloud', 'consulenza IT', 'Italia'],
+    'ShareIT Web Agency costruisce il tuo store brandizzato su misura. Tu porti il traffico social, noi gestiamo stampa Fine Art, cornici e spedizione. Zero abbonamento mensile.',
+  keywords: [
+    'negozio online fotografi',
+    'store illustratori',
+    'stampa fine art',
+    'fulfillment stampe',
+    'shop artisti italiani',
+    'vendere fotografie online',
+    'ShareIT web agency',
+    'ArtStore',
+  ],
   robots: { index: true, follow: true },
   openGraph: {
-    title: 'ShareIT - Innovazione Digitale',
-    description: "ShareIT è un'agenzia digitale italiana specializzata nello sviluppo di soluzioni web e mobile innovative.",
+    title: 'ArtStore by ShareIT — Il negozio online che i fotografi meritano',
+    description:
+      'Store brandizzato, fulfillment premium, zero abbonamento. Porta il tuo pubblico social — noi stampiamo, incorniciamo e spediamo.',
     locale: 'it_IT',
     type: 'website',
   },
