@@ -1118,10 +1118,14 @@ textarea { min-height: 100px; resize: vertical; }
   .menu-mobile-icons { display: flex; }
 
   #hero {
-    padding-top: calc(280px + var(--spacing-xl));
+    height: auto;
+    min-height: 100vh;
+    justify-content: flex-start;
+    padding-top: calc(180px + var(--spacing-xl));
+    padding-bottom: var(--spacing-xl);
   }
 
-  .hero-h1 { font-size: 32px; margin-bottom: var(--spacing-md); }
+  .hero-h1 { font-size: 28px; margin-bottom: var(--spacing-md); line-height: 1.2; letter-spacing: 0; word-break: break-word; }
   .hero-sub { font-size: 18px; margin-bottom: var(--spacing-lg); }
   .hero-stats { gap: var(--spacing-md); flex-direction: column; }
   .hero-stat-divider { display: none; }
@@ -1145,7 +1149,7 @@ textarea { min-height: 100px; resize: vertical; }
 }
 
 @media (max-width: 480px) {
-  .hero-h1 { font-size: 28px; }
+  .hero-h1 { font-size: 24px; letter-spacing: 0; }
   .hero-sub { font-size: 16px; }
   .hero-cta-group { flex-direction: column; align-items: stretch; gap: var(--spacing-sm); width: 100%; max-width: 300px; margin: 0 auto; }
   .hero-btn-primary, .hero-btn-secondary { width: 100%; text-align: center; }
