@@ -6,9 +6,7 @@ export default function FAQ({ data }: { data: any }) {
       <h2 id="faq-title" className="head-2">
         {data.title}
       </h2>
-      <p className="text" style={{ textAlign: 'center', maxWidth: 640, margin: '0 auto var(--spacing-lg)' }}>
-        {data.subtitle}
-      </p>
+      <p className="text section-sub">{data.subtitle}</p>
       <ul className="faq-list" role="list">
         {data.items.map((n: any, i: number) => (
           <li key={i}>

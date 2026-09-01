@@ -25,7 +25,7 @@ export default function Contact() {
       <h2 id="contatti-title" className="head-2">
         Parliamo del tuo business
       </h2>
-      <p className="text" style={{ textAlign: 'center', maxWidth: 600, margin: '0 auto var(--spacing-lg)' }}>
+      <p className="text section-sub">
         Raccontaci come lavori e quale processo vorresti migliorare. Ti rispondiamo entro 48 ore
         con una prima valutazione — e se non è il caso di costruire nulla, te lo diciamo.
       </p>
@@ -95,14 +95,14 @@ export default function Contact() {
           />
         </div>
 
-        <button type="submit" className="btn" id="contact-submit-btn" style={{ alignSelf: 'center', padding: 'var(--spacing-sm) var(--spacing-xl)' }}>
+        <button type="submit" className="btn contact-submit" id="contact-submit-btn">
           Invia richiesta
         </button>
       </form>
 
-      <p className="text" style={{ textAlign: 'center', marginTop: 'var(--spacing-md)', opacity: 0.6, fontSize: 'var(--font-size-sm)' }}>
+      <p className="text section-note">
         Oppure scrivi direttamente a{' '}
-        <a href="mailto:info@shareitwebagency.com" style={{ color: 'var(--accent-color)' }}>
+        <a href="mailto:info@shareitwebagency.com" className="link-accent">
           info@shareitwebagency.com
         </a>
       </p>

@@ -7,11 +7,11 @@ export default function Footer() {
       </a>
 
       <div className="footer-center">
-        <p className="text" style={{ fontSize: 'var(--font-size-sm)', opacity: 0.8, textAlign: 'center' }}>
+        <p className="text footer-claim">
           Web app e agent AI su misura per il tuo business.
           <br />
           Powered by{' '}
-          <strong style={{ color: 'var(--accent-color)' }}>ShareIT Web Agency</strong>
+          <strong className="link-accent">ShareIT Web Agency</strong>
         </p>
         <div className="footer-links">
           <a href="#servizi">Servizi</a>
