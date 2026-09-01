@@ -408,50 +408,6 @@ ul[role="list"] {
   transform: scale(1.2);
 }
 
-/* ===== QUIZ ===== */
-.quiz-container {
-  max-width: 600px;
-  margin: var(--spacing-md) auto 0;
-  text-align: center;
-}
-
-.quiz-progress {
-  height: 6px;
-  background: #222;
-  margin-bottom: var(--spacing-md);
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.quiz-progress-bar {
-  height: 100%;
-  background: var(--accent-color);
-  transition: width 0.3s;
-}
-
-.answers {
-  display: grid;
-  gap: 10px;
-  margin-top: var(--spacing-md);
-}
-
-.answer-btn {
-  background: var(--color-box-inner);
-  border: 1px solid rgba(0, 216, 255, 0.3);
-  color: var(--color-text);
-  padding: 12px;
-  cursor: pointer;
-  border-radius: var(--border-radius-sm);
-  font-family: var(--font-primary);
-  font-size: var(--font-size-base);
-  transition: var(--transition-standard);
-}
-
-.answer-btn:hover {
-  background: var(--gradient-primary);
-  border-color: transparent;
-}
-
 /* ===== FORM ===== */
 .contact-form {
   display: flex;
@@ -738,7 +694,8 @@ textarea { min-height: 100px; resize: vertical; }
 /* ===== STEPS GRID (How It Works) ===== */
 .steps-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* 6 step su due righe da 3 */
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-md);
   list-style: none;
   padding: 0;
@@ -1090,6 +1047,7 @@ textarea { min-height: 100px; resize: vertical; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
+  .steps-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-h1 { font-size: 48px; }
   .hero-sub { font-size: 22px; }
   .footer { grid-template-columns: 1fr; justify-items: center; text-align: center; }
@@ -1099,6 +1057,8 @@ textarea { min-height: 100px; resize: vertical; }
 
 @media (max-width: 768px) {
   html { scroll-snap-type: none; }
+
+  .steps-grid { grid-template-columns: 1fr; }
 
   .header {
     width: 95%;

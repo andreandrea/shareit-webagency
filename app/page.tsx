@@ -7,7 +7,6 @@ import About from '@/components/sections/About'
 import Portfolio from '@/components/sections/Portfolio'
 import Pricing from '@/components/sections/Pricing'
 import FAQ from '@/components/sections/News'
-import Quiz from '@/components/sections/Quiz'
 import Contact from '@/components/sections/Contact'
 
 export default function Home() {
@@ -18,7 +17,6 @@ export default function Home() {
   const portfolioData = getContent('portfolio')
   const pricingData = getContent('pricing')
   const faqData = getContent('faq')
-  const quizData = getContent('quiz')
 
   return (
     <>
@@ -30,7 +28,6 @@ export default function Home() {
         <Portfolio data={portfolioData} />
         <Pricing data={pricingData} />
         <FAQ data={faqData} />
-        <Quiz data={quizData} />
         <Contact />
       </main>
     </>
