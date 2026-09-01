@@ -40,11 +40,10 @@ components/
     Portfolio.tsx   — progetti/configuratori realizzati (server)
     Pricing.tsx     — modalità di collaborazione (server)
     News.tsx        — FAQ (server)
-    Quiz.tsx        — quiz 3 domande con punteggio (client)
     Contact.tsx     — form di contatto con feedback (client)
 content/            — testi delle sezioni in Markdown + front matter
   hero.md, servizi.md, how-it-works.md, about.md,
-  portfolio.md, pricing.md, faq.md, quiz.md
+  portfolio.md, pricing.md, faq.md
 lib/
   content.ts        — getContent(): legge content/<nome>.md con gray-matter
 ```

@@ -20,7 +20,7 @@ npm run lint    # eslint
 ## Contenuti
 
 I testi delle sezioni stanno nei file Markdown di `content/` (front matter YAML): `hero.md`,
-`servizi.md`, `how-it-works.md`, `about.md`, `portfolio.md`, `pricing.md`, `faq.md`, `quiz.md`.
+`servizi.md`, `how-it-works.md`, `about.md`, `portfolio.md`, `pricing.md`, `faq.md`.
 I componenti in `components/sections/` li ricevono come prop — per cambiare un testo si modifica
 il Markdown, non il componente.
 

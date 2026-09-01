@@ -10,7 +10,6 @@ const navItems = [
   { href: '#portfolio', label: 'Progetti' },
   { href: '#prezzi', label: 'Collaborazione' },
   { href: '#faq', label: 'FAQ' },
-  { href: '#quiz', label: 'Quiz' },
   { href: '#contatti', label: 'Contatti' },
 ]
 
