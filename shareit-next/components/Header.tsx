@@ -4,13 +4,14 @@ import { useState, useEffect } from 'react'
 
 const navItems = [
   { href: '#hero', label: 'Home' },
-  { href: '#come-funziona', label: 'Come Funziona' },
+  { href: '#servizi', label: 'Servizi' },
+  { href: '#come-funziona', label: 'Metodo' },
   { href: '#chi-siamo', label: 'Chi Siamo' },
-  { href: '#portfolio', label: 'Store Attivi' },
-  { href: '#prezzi', label: 'Prezzi' },
+  { href: '#portfolio', label: 'Progetti' },
+  { href: '#prezzi', label: 'Collaborazione' },
   { href: '#faq', label: 'FAQ' },
   { href: '#quiz', label: 'Quiz' },
-  { href: '#contatti', label: 'Candidati' },
+  { href: '#contatti', label: 'Contatti' },
 ]
 
 function FacebookIcon() {
@@ -110,13 +111,13 @@ export default function Header() {
 
       {/* Icone contatti (destra) */}
       <div className="header-icons contact-icons">
-        <a href="mailto:artstore@shareitwebagency.com" className="header-icon-circle" aria-label="Email" id="header-email-btn">
+        <a href="mailto:info@shareitwebagency.com" className="header-icon-circle" aria-label="Email" id="header-email-btn">
           <EmailIcon />
         </a>
         <a href="tel:+390291234567" className="header-icon-circle" aria-label="Telefono" id="header-phone-btn">
           <PhoneIcon />
         </a>
-        <a href="#contatti" className="header-icon-circle" aria-label="Candidati" onClick={close} id="header-apply-btn">
+        <a href="#contatti" className="header-icon-circle" aria-label="Contattaci" onClick={close} id="header-contact-btn">
           <ChatIcon />
         </a>
       </div>

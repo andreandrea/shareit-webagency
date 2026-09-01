@@ -1,6 +1,7 @@
 import { getContent } from '@/lib/content'
 
 import Hero from '@/components/sections/Hero'
+import Servizi from '@/components/sections/Servizi'
 import HowItWorks from '@/components/sections/Services'
 import About from '@/components/sections/About'
 import Portfolio from '@/components/sections/Portfolio'
@@ -11,6 +12,7 @@ import Contact from '@/components/sections/Contact'
 
 export default function Home() {
   const heroData = getContent('hero')
+  const serviziData = getContent('servizi')
   const howItWorksData = getContent('how-it-works')
   const aboutData = getContent('about')
   const portfolioData = getContent('portfolio')
@@ -22,6 +24,7 @@ export default function Home() {
     <>
       <Hero data={heroData} />
       <main id="main-content" className="background">
+        <Servizi data={serviziData} />
         <HowItWorks data={howItWorksData} />
         <About data={aboutData} />
         <Portfolio data={portfolioData} />

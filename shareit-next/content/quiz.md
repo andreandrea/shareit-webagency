@@ -1,52 +1,52 @@
 ---
-title: "Il modello ArtStore in 3 domande"
-subtitle: "Scopri se hai già capito come funziona la piattaforma — e quanto sei pronto a candidarti."
+title: "Il nostro approccio in 3 domande"
+subtitle: "Scopri se il nostro modo di lavorare è quello che stai cercando."
 results:
   - min: 0
     max: 0
     emoji: ""
-    message: "Ancora qualche dubbio? Leggi la sezione \"Come funziona\" e poi candidati."
+    message: "Nessun problema: leggi la sezione \"Il nostro metodo\" e poi scrivici, ne parliamo insieme."
   - min: 1
     max: 1
     emoji: ""
-    message: "Ci sei quasi! Il modello ArtStore è fatto per te."
+    message: "Sei sulla strada giusta. Raccontaci il tuo business e vediamo cosa si può costruire."
   - min: 2
     max: 2
     emoji: ""
-    message: "Quasi esperto! Pronto per aprire il tuo store?"
+    message: "Ci siamo quasi: parliamo di come applicare il metodo al tuo caso."
   - min: 3
     max: 3
     emoji: ""
-    message: "Perfetto! Candidati subito — sei esattamente il tipo di artista che cerchiamo."
+    message: "Perfetto, hai capito esattamente come lavoriamo. Scrivici e partiamo dall'analisi."
 questions:
-  - text: "Quale canale porta davvero clienti ai tuoi prodotti?"
+  - text: "Da dove parte un progetto ShareIT?"
     answers:
-      - label: "Il marketplace dove sono listato tra 10.000 artisti"
+      - label: "Dalla scelta della tecnologia"
         correct: false
-      - label: "Il mio Instagram/TikTok dove ho follower miei"
+      - label: "Dall'esplorazione del business e dei processi"
         correct: true
-      - label: "La pubblicità su Google Ads"
+      - label: "Da un template da personalizzare"
         correct: false
-      - label: "Il passaparola offline"
+      - label: "Da un preventivo a corpo, prima di parlarsi"
         correct: false
-  - text: "Quanto paga di abbonamento mensile un artista sulla piattaforma ArtStore?"
+  - text: "Che tipo di web app costruite?"
     answers:
-      - label: "29 €/mese (come Shopify)"
+      - label: "Solo siti vetrina"
         correct: false
-      - label: "15 €/mese"
+      - label: "Prodotti standard uguali per tutti i clienti"
         correct: false
-      - label: "0 € — si paga solo sulla vendita"
+      - label: "Applicazioni su misura sulle regole del tuo business"
         correct: true
-      - label: "9,90 €/mese + commissioni"
+      - label: "App mobile da pubblicare sugli store"
         correct: false
-  - text: "Cosa fa ShareIT dopo che un cliente acquista un'opera sullo store di un artista?"
+  - text: "Cosa rende utile un agent AI secondo noi?"
     answers:
-      - label: "Invia le istruzioni all'artista per spedire lui"
-        correct: false
-      - label: "Aspetta che il cliente ritiri in sede"
-        correct: false
-      - label: "Stampa, incornicia e spedisce in 3-5 giorni lavorativi"
+      - label: "Essere addestrato sui tuoi dati e collegato ai tuoi sistemi"
         correct: true
-      - label: "Contatta l'artista per farsi mandare il file originale"
+      - label: "Rispondere in modo brillante a domande generiche"
+        correct: false
+      - label: "Sostituire completamente le persone del team"
+        correct: false
+      - label: "Essere il modello più grande disponibile"
         correct: false
 ---

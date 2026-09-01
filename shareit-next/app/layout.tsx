@@ -17,24 +17,24 @@ const orbitron = Orbitron({
 })
 
 export const metadata: Metadata = {
-  title: 'ArtStore by ShareIT — Negozi online per fotografi e illustratori',
+  title: 'ShareIT Web Agency — Web app e agent AI su misura per il tuo business',
   description:
-    'ShareIT Web Agency costruisce il tuo store brandizzato su misura. Tu porti il traffico social, noi gestiamo stampa Fine Art, cornici e spedizione. Zero abbonamento mensile.',
+    'Esploriamo a fondo il tuo business, poi costruiamo web app su misura e agent AI addestrati sui tuoi dati e integrati nei tuoi processi. Niente template, niente soluzioni preconfezionate.',
   keywords: [
-    'negozio online fotografi',
-    'store illustratori',
-    'stampa fine art',
-    'fulfillment stampe',
-    'shop artisti italiani',
-    'vendere fotografie online',
+    'web app su misura',
+    'sviluppo software personalizzato',
+    'agent AI aziendali',
+    'intelligenza artificiale per aziende',
+    'configuratore prodotto online',
+    'analisi processi aziendali',
+    'digitalizzazione processi',
     'ShareIT web agency',
-    'ArtStore',
   ],
   robots: { index: true, follow: true },
   openGraph: {
-    title: 'ArtStore by ShareIT — Il negozio online che i fotografi meritano',
+    title: 'ShareIT Web Agency — Prima capiamo il tuo business, poi lo costruiamo',
     description:
-      'Store brandizzato, fulfillment premium, zero abbonamento. Porta il tuo pubblico social — noi stampiamo, incorniciamo e spediamo.',
+      'Analisi del business, web app su misura e agent AI integrati nei tuoi processi. Due esempi: i configuratori di Fotorecord ed Eternografiche.',
     locale: 'it_IT',
     type: 'website',
   },

@@ -972,6 +972,7 @@ textarea { min-height: 100px; resize: vertical; }
 .pricing-price {
   display: flex;
   align-items: baseline;
+  flex-wrap: wrap;
   gap: 6px;
   margin: var(--spacing-sm) 0;
 }
@@ -982,6 +983,11 @@ textarea { min-height: 100px; resize: vertical; }
   font-weight: 800;
   color: var(--accent-color);
   line-height: 1;
+}
+
+/* Piani a preventivo: il "prezzo" è testo, non un importo */
+.pricing-amount--text {
+  font-size: 26px;
 }
 
 .pricing-period {
