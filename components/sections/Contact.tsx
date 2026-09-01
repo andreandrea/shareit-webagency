@@ -2,6 +2,14 @@
 
 import { useState } from 'react'
 
+const needs = [
+  'Una app / web app',
+  'Un sito web',
+  "Un'automazione",
+  "Un'integrazione con l'IA",
+  'Non lo so ancora, voglio capirlo insieme',
+]
+
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
 
@@ -65,6 +73,18 @@ export default function Contact() {
             placeholder="Es. stampa e cornici su misura, produzione, servizi B2B..."
           />
         </div>
+
+        <fieldset className="form-group needs-fieldset">
+          <legend>Di cosa avresti bisogno?</legend>
+          <div className="needs-grid">
+            {needs.map((need, i) => (
+              <label key={need} className="need-option">
+                <input type="checkbox" id={`contact-need-${i}`} name="needs" value={need} />
+                <span>{need}</span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
 
         <div className="form-group">
           <label htmlFor="contact-message">Quale processo vorresti migliorare o automatizzare</label>

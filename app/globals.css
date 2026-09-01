@@ -446,6 +446,62 @@ input:focus, textarea:focus {
 
 textarea { min-height: 100px; resize: vertical; }
 
+/* Gruppo di caselle "Di cosa avresti bisogno?" */
+.needs-fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.needs-fieldset legend {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.needs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+}
+
+.need-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-box-inner);
+  border: 1px solid rgba(0, 216, 255, 0.2);
+  border-radius: var(--border-radius-sm);
+  padding: 12px;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: var(--transition-standard);
+}
+
+.need-option:hover {
+  border-color: var(--accent-color);
+}
+
+.need-option:focus-within {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(0, 216, 255, 0.1);
+}
+
+.need-option:has(input:checked) {
+  border-color: var(--accent-color);
+  background: rgba(0, 216, 255, 0.08);
+}
+
+.need-option input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  padding: 0;
+  accent-color: var(--accent-color);
+  cursor: pointer;
+}
+
 .btn {
   background: var(--gradient-primary);
   border: none;
