@@ -8,19 +8,19 @@ export default function Footer() {
 
       <div className="footer-center">
         <p className="text" style={{ fontSize: 'var(--font-size-sm)', opacity: 0.8, textAlign: 'center' }}>
-          Il negozio online per fotografi e illustratori.
+          Web app e agent AI su misura per il tuo business.
           <br />
           Powered by{' '}
           <strong style={{ color: 'var(--accent-color)' }}>ShareIT Web Agency</strong>
         </p>
         <div className="footer-links">
-          <a href="#come-funziona">Come Funziona</a>
+          <a href="#servizi">Servizi</a>
           <span className="footer-policy-sep">·</span>
-          <a href="#prezzi">Prezzi</a>
+          <a href="#come-funziona">Metodo</a>
           <span className="footer-policy-sep">·</span>
-          <a href="#contatti">Candidati</a>
+          <a href="#portfolio">Progetti</a>
           <span className="footer-policy-sep">·</span>
-          <a href="mailto:artstore@shareitwebagency.com">Contatti</a>
+          <a href="mailto:info@shareitwebagency.com">Contatti</a>
         </div>
       </div>
 

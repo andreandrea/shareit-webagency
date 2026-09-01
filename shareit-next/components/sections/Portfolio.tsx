@@ -10,24 +10,26 @@ export default function Portfolio({ data }: { data: any }) {
         {data.subtitle}
       </p>
       <ul className="services-grid" role="list">
-        {data.stores.map((ex: any) => (
-          <li key={ex.artist}>
+        {data.projects.map((p: any) => (
+          <li key={p.title}>
             <article className="lv2 service-card store-card">
-              <div className="store-tag" style={{ borderColor: ex.tagColor, color: ex.tagColor }}>
-                {ex.tag}
+              <div className="store-tag" style={{ borderColor: p.tagColor, color: p.tagColor }}>
+                {p.tag}
               </div>
               <h3 className="head-3" style={{ marginTop: 'var(--spacing-sm)' }}>
-                {ex.artist}
+                {p.title}
               </h3>
-              <p className="text store-handle">{ex.handle}</p>
-              <p className="text" style={{ marginTop: 'var(--spacing-sm)' }}>{ex.description}</p>
+              <p className="text store-handle">{p.client}</p>
+              <p className="text" style={{ marginTop: 'var(--spacing-sm)' }}>{p.description}</p>
               <div className="store-result">
                 <span className="text" style={{ fontSize: 'var(--font-size-sm)', fontWeight: 600 }}>
-                  Risultato: {ex.result}
+                  Risultato: {p.result}
                 </span>
               </div>
               <div className="store-meta">
-                <span className="store-meta-item">{ex.works} opere caricate</span>
+                {p.stack.map((s: string) => (
+                  <span key={s} className="store-meta-item">{s}</span>
+                ))}
               </div>
             </article>
           </li>

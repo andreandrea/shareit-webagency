@@ -1,6 +1,15 @@
 # ShareIT Web Agency
 
-Sito istituzionale di **ShareIT**, agenzia digitale italiana. Il progetto vive interamente in `shareit-next/` (Next.js 16).
+Sito istituzionale di **ShareIT Web Agency**: analisi del business, web app su misura e agent AI
+personalizzati. Il progetto vive interamente in `shareit-next/` (Next.js 16).
+
+## Core business (contenuti del sito)
+
+1. Capiamo ed esploriamo a fondo il business del cliente
+2. Creazione di web app personalizzate su misura
+3. Creazione di agent AI personalizzati su misura
+
+Esempi di riferimento nella sezione progetti: **configuratore Fotorecord** e **configuratore Eternografiche**.
 
 ## Stack
 
@@ -24,20 +33,30 @@ components/
   Header.tsx        — menu modale (client component)
   Footer.tsx        — footer con icone social SVG inline
   sections/
-    Hero.tsx        — sezione hero (server)
-    Services.tsx    — griglia 6 servizi (server)
+    Hero.tsx        — sezione hero con parola rotante (client)
+    Servizi.tsx     — i 3 servizi core (server)
+    Services.tsx    — "Il nostro metodo", 6 step (server)
     About.tsx       — chi siamo + carosello auto (client)
-    Portfolio.tsx   — 3 progetti (server)
-    News.tsx        — 3 news (server)
+    Portfolio.tsx   — progetti/configuratori realizzati (server)
+    Pricing.tsx     — modalità di collaborazione (server)
+    News.tsx        — FAQ (server)
     Quiz.tsx        — quiz 3 domande con punteggio (client)
     Contact.tsx     — form di contatto con feedback (client)
+content/            — testi delle sezioni in Markdown + front matter
+  hero.md, servizi.md, how-it-works.md, about.md,
+  portfolio.md, pricing.md, faq.md, quiz.md
+lib/
+  content.ts        — getContent(): legge content/<nome>.md con gray-matter
 ```
+
+I testi delle sezioni si modificano **solo** nei file di `content/`: i componenti ricevono i dati
+come prop dal front matter YAML e non contengono copy hardcoded (eccetto `Contact.tsx`).
 
 ## Comandi
 
 ```bash
 cd shareit-next
-npm run dev     # sviluppo locale (http://localhost:3000)
+npm run dev     # sviluppo locale (http://localhost:3200)
 npm run build   # build produzione
 npm run start   # avvia server produzione
 ```

@@ -1,23 +1,23 @@
 ---
-badge: "Il tuo store è pronto in 48 ore"
+badge: "Prima capiamo il tuo business. Poi lo costruiamo."
 words:
-  - Fotografi
-  - Illustratori
-  - Artisti Visivi
-  - Creativi
-headline: "Il negozio online che i [WORD] meritano davvero."
+  - business
+  - lavoro
+  - processo
+  - settore
+headline: "Web app e agent AI costruiti sul tuo [WORD], non su un template."
 subtitle: |
-  Costruiamo il tuo store personalizzato, gestiamo stampa, cornice e spedizione.
-  Tu porti il tuo pubblico — noi pensiamo al resto.
-cta_primary: "Scopri come funziona"
+  Esploriamo a fondo come lavori davvero — processi, dati, persone.
+  Poi costruiamo il software e gli agent AI che ti servono, solo quelli.
+cta_primary: "Scopri il metodo"
 cta_primary_href: "#come-funziona"
-cta_secondary: "Candidati ora →"
+cta_secondary: "Parliamo del tuo progetto →"
 cta_secondary_href: "#contatti"
 stats:
-  - value: "48h"
-    label: "Store online"
-  - value: "0€"
-    label: "Abbonamento mensile"
+  - value: "0"
+    label: "Soluzioni preconfezionate"
   - value: "100%"
-    label: "Brandizzato con te"
+    label: "Software su misura"
+  - value: "AI"
+    label: "Agent dentro i tuoi processi"
 ---

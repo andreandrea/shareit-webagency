@@ -1,26 +1,25 @@
 ---
-title: "Store in produzione"
-subtitle: "Tre esempi di artisti già operativi sulla piattaforma. Nomi reali, numeri reali."
-stores:
-  - artist: "Marta Ferroni"
-    handle: "@martaferroni_photo"
-    tag: "Fotografia di paesaggio"
+title: "Due esempi concreti"
+subtitle: "Due configuratori nati dallo stesso metodo: prima l'analisi del business, poi una web app costruita sulle regole reali dell'azienda."
+projects:
+  - title: "Configuratore Fotorecord"
+    client: "Fotorecord — stampa fine art e cornici"
+    tag: "Web app su misura"
     tagColor: "#00D8FF"
-    works: 12
-    result: "Prima vendita dopo 3 giorni dall'apertura store."
-    description: "Il suo store su fotorecord.art converte il traffico Instagram in stampe Fine Art 50×70 cm a 120 €. Margine artista: 45 € a pezzo."
-  - artist: "Lorenzo Bruni"
-    handle: "@lorenzobruni.art"
-    tag: "Illustrazione digitale"
+    description: "Il cliente carica la propria immagine e compone il prodotto passo dopo passo: formato, supporto di stampa, cornice e finiture. Ogni scelta aggiorna in tempo reale l'anteprima e il prezzo, calcolato con le stesse regole che il laboratorio usa a preventivo."
+    result: "Preventivi immediati al posto dello scambio di email, e ordini che arrivano in produzione già completi di tutte le specifiche."
+    stack:
+      - "Configuratore prodotto"
+      - "Prezzi in tempo reale"
+      - "Anteprima visiva"
+  - title: "Configuratore Eternografiche"
+    client: "Eternografiche — grafiche e personalizzazioni"
+    tag: "Web app su misura"
     tagColor: "#a855f7"
-    works: 28
-    result: "8 ordini nel primo mese, 340 € di guadagno netto."
-    description: "Store brandizzato con palette viola e font sans personalizzato. Opere vendute come poster 40×50 cm e stampe su tela con cornice in noce."
-  - artist: "Chiara Valenti"
-    handle: "@chiaravalenti_studio"
-    tag: "Ritratto & Street"
-    tagColor: "#f59e0b"
-    works: 7
-    result: "Lancio con newsletter da 2.400 iscritti → 22 ordini."
-    description: "Chiara gestisce la sua community via email. Il link al suo store ha generato il primo batch di ordini in 48 ore dall'apertura. Zero ads spesi."
+    description: "Un configuratore per la personalizzazione dei prodotti a catalogo: l'utente sceglie modello, materiale, misure e personalizzazioni grafiche, e il sistema applica automaticamente i vincoli tecnici e le combinazioni realizzabili."
+    result: "Meno richieste incomplete da gestire a mano e un catalogo complesso reso navigabile anche a chi non conosce i termini tecnici."
+    stack:
+      - "Regole di configurazione"
+      - "Catalogo dinamico"
+      - "Richiesta d'ordine guidata"
 ---
