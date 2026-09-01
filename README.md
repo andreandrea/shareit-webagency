@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ShareIT Web Agency
 
-## Getting Started
+Sito istituzionale di **ShareIT Web Agency**: analisi del business, web app su misura e agent AI personalizzati.
 
-First, run the development server:
+## Sviluppo
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # http://localhost:3200
 ```
 
-Open [http://localhost:3200](http://localhost:3200) with your browser to see the result.
+Altri comandi:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build   # build di produzione
+npm run start   # server di produzione (porta 3200)
+npm run lint    # eslint
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contenuti
 
-## Learn More
+I testi delle sezioni stanno nei file Markdown di `content/` (front matter YAML): `hero.md`,
+`servizi.md`, `how-it-works.md`, `about.md`, `portfolio.md`, `pricing.md`, `faq.md`, `quiz.md`.
+I componenti in `components/sections/` li ricevono come prop — per cambiare un testo si modifica
+il Markdown, non il componente.
 
-To learn more about Next.js, take a look at the following resources:
+## Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Next.js 16 (App Router, Turbopack) · React 19 · TypeScript · CSS custom + Tailwind CSS v4 ·
+font Titillium Web e Orbitron auto-hostati via `next/font/google`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Vercel, progetto `shareit-webagency`, Root Directory vuota (il progetto è nella root del repo).
+Ogni push su `main` aggiorna la produzione.
