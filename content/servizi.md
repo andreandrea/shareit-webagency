@@ -19,6 +19,7 @@ services:
       - "Integrazione con gestionale, e-commerce e fornitori"
       - "Sviluppo iterativo con rilasci frequenti"
   - number: "03"
+    thinking: true
     title: "Agent AI su misura"
     description: "Agent addestrati sul tuo contesto — cataloghi, listini, procedure, storico — che lavorano dentro i tuoi strumenti invece di restare una chat generica."
     bullets:

@@ -1,38 +1,62 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import NeuralBackground from './NeuralBackground'
+
+const VELOCITA_SCRITTURA = 75
+const VELOCITA_CANCELLAZIONE = 40
+const PAUSA_PAROLA_COMPLETA = 1800
 
 export default function Hero({ data }: { data: any }) {
-  const [index, setIndex] = useState(0)
-  const [visible, setVisible] = useState(true)
+  const words: string[] = data?.words || ['business', 'lavoro', 'processo', 'settore']
 
-  const words = data?.words || ['Fotografi', 'Illustratori', 'Artisti', 'Creativi']
+  const [indice, setIndice] = useState(0)
+  const [scritto, setScritto] = useState(words[0])
+  const [fase, setFase] = useState<'scrive' | 'attende' | 'cancella'>('attende')
+  const [animato, setAnimato] = useState(false)
+
+  // Con prefers-reduced-motion la parola resta fissa
+  useEffect(() => {
+    setAnimato(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+  }, [])
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setVisible(false)
-      setTimeout(() => {
-        setIndex((prev) => (prev + 1) % words.length)
-        setVisible(true)
-      }, 400)
-    }, 2800)
-    return () => clearInterval(interval)
-  }, [words])
+    if (!animato) return
+    const parola = words[indice]
+    let timer: ReturnType<typeof setTimeout>
+
+    if (fase === 'scrive') {
+      if (scritto.length < parola.length) {
+        timer = setTimeout(() => setScritto(parola.slice(0, scritto.length + 1)), VELOCITA_SCRITTURA)
+      } else {
+        timer = setTimeout(() => setFase('attende'), PAUSA_PAROLA_COMPLETA)
+      }
+    } else if (fase === 'attende') {
+      timer = setTimeout(() => setFase('cancella'), PAUSA_PAROLA_COMPLETA)
+    } else {
+      if (scritto.length > 0) {
+        timer = setTimeout(() => setScritto(parola.slice(0, scritto.length - 1)), VELOCITA_CANCELLAZIONE)
+      } else {
+        setIndice((i) => (i + 1) % words.length)
+        setFase('scrive')
+      }
+    }
+
+    return () => clearTimeout(timer)
+  }, [animato, fase, scritto, indice, words])
 
   if (!data) return null;
 
   return (
     <section id="hero" aria-labelledby="hero-title">
+      <NeuralBackground />
+
       <div className="hero-badge">{data.badge}</div>
 
       <h1 id="hero-title" className="head-2 hero-h1">
         {data.headline.split('[WORD]')[0]}
-        <span
-          className="hero-word"
-          style={{ opacity: visible ? 1 : 0, transition: 'opacity 0.4s ease' }}
-        >
-          {words[index]}
-        </span>
+        <span className="hero-word">{scritto}</span>
+        {animato && <span className="hero-caret" aria-hidden="true" />}
         {data.headline.split('[WORD]')[1]}
       </h1>
 
@@ -44,7 +68,7 @@ export default function Hero({ data }: { data: any }) {
         <a href={data.cta_primary_href} className="btn hero-btn-primary" id="hero-cta-primary">
           {data.cta_primary}
         </a>
-        <a href={data.cta_secondary_href} className="btn hero-btn-secondary" id="hero-cta-secondary">
+        <a href={data.cta_secondary_href} className="btn btn--ghost hero-btn-secondary" id="hero-cta-secondary">
           {data.cta_secondary}
         </a>
       </div>

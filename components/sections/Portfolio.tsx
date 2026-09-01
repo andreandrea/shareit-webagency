@@ -27,6 +27,17 @@ export default function Portfolio({ data }: { data: any }) {
                   <span key={s} className="card-tag-item">{s}</span>
                 ))}
               </div>
+              {p.url && (
+                <a
+                  className="card-link"
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Vedi il configuratore
+                  <span aria-hidden="true"> →</span>
+                </a>
+              )}
             </article>
           </li>
         ))}
