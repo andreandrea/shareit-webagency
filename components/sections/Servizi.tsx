@@ -10,7 +10,7 @@ export default function Servizi({ data }: { data: any }) {
       <ul className="card-grid" role="list">
         {data.services.map((s: any) => (
           <li key={s.number}>
-            <article className="lv2 card">
+            <article className={`lv2 card${s.thinking ? ' card--thinking' : ''}`}>
               <div className="step-header">
                 <span className="step-number">{s.number}</span>
               </div>
