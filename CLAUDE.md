@@ -1,7 +1,7 @@
 # ShareIT Web Agency
 
 Sito istituzionale di **ShareIT Web Agency**: analisi del business, web app su misura e agent AI
-personalizzati. Il progetto vive interamente in `shareit-next/` (Next.js 16).
+personalizzati. Il progetto Next.js 16 vive nella root del repository.
 
 ## Core business (contenuti del sito)
 
@@ -21,7 +21,7 @@ Esempi di riferimento nella sezione progetti: **configuratore Fotorecord** e **c
 | Font | Titillium Web + Orbitron via `next/font/google` |
 | React | v19.2 |
 
-## Struttura `shareit-next/`
+## Struttura
 
 ```
 app/
@@ -55,16 +55,25 @@ come prop dal front matter YAML e non contengono copy hardcoded (eccetto `Contac
 ## Comandi
 
 ```bash
-cd shareit-next
 npm run dev     # sviluppo locale (http://localhost:3200)
 npm run build   # build produzione
 npm run start   # avvia server produzione
 ```
 
+## Deploy
+
+Progetto Vercel `shareit-webagency` — **Root Directory vuota** (il progetto è nella root del repo).
+
 ## Note Next.js 16
 
+> **Attenzione:** Next.js 16 ha breaking changes rispetto alle versioni precedenti.
+> Prima di scrivere codice, leggi `node_modules/next/dist/docs/` per le API aggiornate.
+> Rispetta gli avvisi di deprecazione.
+
 - **Turbopack** è abilitato di default per `dev` e `build`
-- `params` e `searchParams` sono **async** (breaking change da v15)
+- `params` e `searchParams` sono **Promise** — usa `await` (breaking change da v15)
+- `experimental.turbopack` è ora `turbopack` a livello top di `next.config.ts`
+- `revalidateTag` richiede un secondo argomento `cacheLife`
 - I componenti con `useState`/`useEffect` richiedono `'use client'`
 - I font sono auto-hostati (nessuna richiesta esterna a Google)
 - Le icone social sono SVG inline (no FontAwesome)
