@@ -51,7 +51,7 @@ export default function Hero({ data }: { data: any }) {
 
       <div className="hero-stats">
         {data.stats.map((stat: any, i: number) => (
-          <div key={i} style={{display: 'flex', gap: 'var(--spacing-xl)', alignItems: 'center'}}>
+          <div key={i} className="hero-stat-group">
             <div className="hero-stat">
               <span className="hero-stat-value">{stat.value}</span>
               <span className="hero-stat-label">{stat.label}</span>

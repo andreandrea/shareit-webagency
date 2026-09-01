@@ -34,16 +34,14 @@ export default function About({ data }: { data: any }) {
                 <span className="pillar-icon">{pillar.icon}</span>
                 <div>
                   <strong>{pillar.title}</strong>
-                  <p className="text" style={{ marginTop: 4 }}>
-                    {pillar.description}
-                  </p>
+                  <p className="text">{pillar.description}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="carousel-container" aria-live="polite" aria-atomic="true" style={{ flex: '1 1 360px', minWidth: 280 }}>
+        <div className="carousel-container about-carousel-col" aria-live="polite" aria-atomic="true">
           <div
             className="carousel"
             style={{ transform: `translateX(-${current * 100}%)` }}
