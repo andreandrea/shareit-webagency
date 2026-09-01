@@ -420,49 +420,6 @@ ul[role="list"] {
   padding: 0;
 }
 
-/* ===== CAROUSEL ===== */
-.carousel-container {
-  position: relative;
-  overflow: hidden;
-  margin-top: var(--spacing-md);
-  flex: 1;
-}
-
-.carousel {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  height: 100%;
-}
-
-.carousel-slide {
-  min-width: 100%;
-  box-sizing: border-box;
-}
-
-.carousel-controls {
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-sm);
-  margin-top: var(--spacing-md);
-  padding-bottom: var(--spacing-sm);
-}
-
-.carousel-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: var(--accent-secondary);
-  cursor: pointer;
-  border: none;
-  padding: 0;
-  transition: all 0.3s ease;
-}
-
-.carousel-dot.active {
-  background-color: var(--accent-color);
-  transform: scale(1.2);
-}
-
 /* ===== FORM ===== */
 .contact-submit {
   align-self: center;
@@ -840,65 +797,60 @@ textarea { min-height: 100px; resize: vertical; }
   font-size: 28px;
 }
 
-/* ===== ABOUT LAYOUT ===== */
-.about-layout {
+/* ===== CHI SIAMO ===== */
+.about-intro {
+  max-width: var(--content-narrow);
+  margin: 0 auto var(--spacing-lg);
+  text-align: center;
+  font-size: var(--font-size-md);
+  line-height: 1.7;
+}
+
+/* Manifesto: etichetta e spiegazione, separati da linee sottili.
+   Texture diversa dalle sezioni a card, tutto visibile senza interazione. */
+.about-manifesto {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-md);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: var(--content-narrow);
+  margin-inline: auto;
+  width: 100%;
 }
 
-/* min-width: 0 e max-width: 100% così le colonne non sforano mai la sezione */
-.about-carousel-col {
-  flex: 1 1 360px;
-  min-width: 0;
-  max-width: 100%;
+.about-row {
+  display: grid;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-md) 0;
+  border-top: 1px solid rgba(0, 216, 255, 0.14);
 }
 
-.about-text-col {
-  flex: 1 1 340px;
-  min-width: 0;
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
+.about-row:last-child {
+  border-bottom: 1px solid rgba(0, 216, 255, 0.14);
 }
 
-.about-pillars {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
-  margin-top: var(--spacing-sm);
+.about-label {
+  position: relative;
+  margin: 0;
+  text-shadow: 0 0 18px rgba(0, 216, 255, 0.25);
 }
 
-.pillar {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--spacing-sm);
-  background: rgba(0, 216, 255, 0.04);
-  border: 1px solid rgba(0, 216, 255, 0.08);
-  border-radius: var(--border-radius-md);
-  padding: var(--spacing-sm);
-  transition: var(--transition-standard);
-}
-
-.pillar:hover {
-  border-color: rgba(0, 216, 255, 0.2);
-  background: rgba(0, 216, 255, 0.07);
-}
-
-.pillar-icon {
-  font-size: 24px;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.pillar strong {
-  font-family: var(--font-accent);
-  font-size: var(--font-size-sm);
-  color: var(--accent-color);
+/* Trattino accent davanti all'etichetta, si allunga al passaggio del mouse */
+.about-label::before {
+  content: '';
   display: block;
+  width: 22px;
+  height: 2px;
+  margin-bottom: var(--spacing-xs);
+  border-radius: 2px;
+  background: var(--gradient-primary);
+  box-shadow: 0 0 12px rgba(0, 216, 255, 0.5);
+  transition: width 0.3s ease;
+}
+
+.about-row:hover .about-label::before {
+  width: 44px;
 }
 
 /* ===== DETTAGLI DELLE CARD ===== */
@@ -1322,11 +1274,12 @@ textarea { min-height: 100px; resize: vertical; }
   .hero-stat-group { flex-direction: row; gap: var(--spacing-xl); }
   .hero-stat-divider { display: block; }
 
-  .about-layout {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: var(--spacing-xl);
+  /* Manifesto su due colonne: etichetta a sinistra, spiegazione a destra */
+  .about-row {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.6fr);
+    gap: var(--spacing-lg);
+    align-items: baseline;
+    padding: var(--spacing-lg) 0;
   }
 }
 
