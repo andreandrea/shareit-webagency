@@ -8,7 +8,7 @@ Aprire `index.html` oppure servire la cartella con un server statico.
 
 ## Deploy su Vercel
 
-Importare il repository come progetto **Other** senza build command. La directory di output è la root del repository.
+Importare il repository come progetto **Other**. Vercel esegue `npm run vercel-build` e pubblica automaticamente la directory `dist`.
 
 Le pagine disponibili sono:
 
