@@ -15,4 +15,5 @@ Le pagine disponibili sono:
 - `/`
 - `/chi-siamo`
 - `/contatti`
-- `/page-template`
+
+`page-template.html` è la base per nuove pagine: resta nel repository ma non viene pubblicata.
